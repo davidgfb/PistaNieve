@@ -6,7 +6,6 @@
 package modelo;
 
 //<editor-fold defaultstate="collapsed" desc="imports">
-import static java.lang.System.out;
 import java.util.Arrays;
 //</editor-fold>
 

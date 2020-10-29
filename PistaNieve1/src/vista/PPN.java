@@ -6,30 +6,20 @@
 package vista;
 
 //<editor-fold defaultstate="collapsed" desc="imports">
-import java.awt.Dimension;
 import java.awt.Graphics;
 import java.awt.Graphics2D;
 import static java.awt.RenderingHints.KEY_ANTIALIASING;
 import static java.awt.RenderingHints.VALUE_ANTIALIAS_ON;
-import static java.lang.System.out;
-import java.util.Arrays;
 import java.util.Random;
-import javax.swing.JFrame;
 import javax.swing.JPanel;
 import modelo.Arbol;
 //</editor-fold>
-
 
 /**
  *
  * @author David
  */
 public class PPN extends JPanel {
-
-    public PPN() {
-        //setSize(1600,1200);
-        
-    }
     
     @Override
     protected void paintComponent(Graphics g) {
@@ -69,8 +59,4 @@ public class PPN extends JPanel {
             g.drawPolygon(x, a.getsY(), x.length);
         }
     }
-    
-    //<editor-fold defaultstate="collapsed" desc="main">
-    
-//</editor-fold>
 }

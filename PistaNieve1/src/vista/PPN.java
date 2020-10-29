@@ -52,36 +52,13 @@ public class PPN extends JPanel {
         }
         //out.println(Arrays.toString(arboles));
         
-        
         for (Arbol a : arboles) {
             int[] x = a.getsX();
             g.drawPolygon(x, a.getsY(), x.length);
         }
-        
-        /*
-        Arbol a = new Arbol(100,100);
-        out.println(a.toString());
-        
-        
-        
-        for (int i=0; i<nArboles; i++) {
-            int[] x = a.getsX(),
-                  y = a.getsY();
-            g.drawPolygon(x, y, x.length);
-        }
-        */
     }
     
     //<editor-fold defaultstate="collapsed" desc="main">
-    ///*
-    public static void main(String[] args) {
-        JFrame f = new JFrame();
-        PPN pPN = new PPN();
-        f.setSize(800, 600);
-        f.add(pPN);
-        f.setDefaultCloseOperation(3);
-        f.setVisible(true);
-    }
-    //*/
+    
 //</editor-fold>
 }

@@ -5,6 +5,8 @@
  */
 package modelo;
 
+import javax.swing.JFrame;
+import vista.PPN;
 import vista.VPN;
 
 /**
@@ -18,7 +20,20 @@ public class Main {
      */
     public static void main(String[] args) {
         //no necesito setDCO(3)
+        /*
         VPN vPN = new VPN();
         vPN.setVisible(true);
+        */
+        
+        ///*
+    
+        JFrame f = new JFrame();
+        PPN pPN = new PPN();
+        f.setSize(800, 600);
+        f.add(pPN);
+        f.setDefaultCloseOperation(3);
+        f.setVisible(true);
+    
+        //*/
     }
 }

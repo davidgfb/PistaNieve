@@ -18,6 +18,8 @@ public class Main {
         PPN pPN = new PPN();
         //vPN.getContentPane().add(pPN);
         
+        vPN.setSize(800, 600);
+        
         /*esto deberia ser semi-transparente añadiendo "niebla"
          *siendo 0 transparente y 255 opaco
          */

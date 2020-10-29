@@ -10,8 +10,12 @@ import java.awt.Graphics;
 import java.awt.Graphics2D;
 import static java.awt.RenderingHints.KEY_ANTIALIASING;
 import static java.awt.RenderingHints.VALUE_ANTIALIAS_ON;
+import static java.lang.System.out;
+import java.util.Arrays;
+import java.util.Random;
 import javax.swing.JFrame;
 import javax.swing.JPanel;
+import modelo.Arbol;
 //</editor-fold>
 
 
@@ -32,23 +36,40 @@ public class PPN extends JPanel {
     }
     
     void pintaComponente(Graphics g) {
-        int[] x = {50,100,0},
-              y = {0,100,100};
         
         Graphics2D g2d = (Graphics2D) g;
         g2d.setRenderingHint(KEY_ANTIALIASING, VALUE_ANTIALIAS_ON);
 
+        int anchoP = getWidth(), 
+            altoP = getHeight();
+        
         int nArboles = 10;
+        //se puede usar arrayList
+        Arbol[] arboles = new Arbol[10];
+        Random r = new Random();
         for (int i=0; i<nArboles; i++) {
-            /*
-            for () {
-               x 
-            }
-            */
-            
-            g.drawPolygon(x, y, x.length);
+            arboles[i]=new Arbol(r.nextInt(anchoP), r.nextInt(altoP));
+        }
+        //out.println(Arrays.toString(arboles));
+        
+        
+        for (Arbol a : arboles) {
+            int[] x = a.getsX();
+            g.drawPolygon(x, a.getsY(), x.length);
         }
         
+        /*
+        Arbol a = new Arbol(100,100);
+        out.println(a.toString());
+        
+        
+        
+        for (int i=0; i<nArboles; i++) {
+            int[] x = a.getsX(),
+                  y = a.getsY();
+            g.drawPolygon(x, y, x.length);
+        }
+        */
     }
     
     //<editor-fold defaultstate="collapsed" desc="main">

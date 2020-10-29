@@ -10,7 +10,6 @@ import static java.lang.System.out;
 import java.util.Arrays;
 //</editor-fold>
 
-
 /**
  *
  * @author David
@@ -52,51 +51,16 @@ public class Arbol {
     }
 //</editor-fold>
 
-    //<editor-fold defaultstate="collapsed" desc="no usado">
-    /*
-    public int[] getsX(int[] sX, int[] sY, int x, int y) {
-        
-        for (int i = 0; i<sX.length; i++) {
-            sX[i]+=x;
-            sY[i]+=y;
-        }
-        
+    //<editor-fold defaultstate="collapsed" desc="getters">
+    public int[] getsX() {    
         return sX;
     }
-    *//*
-    public int[] getsX(int[] sX, int x) {
-        
-        for (int x1 : sX) {
-            x1+=x;
-        }
-        
+    
+    public int[] getsY() {
         return sY;
     }
-    
-    public int[] getsY(int[] sY, int y) {
-        
-        for (int y1 : sY) {
-            y1+=y;
-        }
-        
-        return sY;
-    }
-    */
 //</editor-fold>
     
-    //<editor-fold defaultstate="collapsed" desc="getters">
-    
-//</editor-fold>
-
-    //<editor-fold defaultstate="collapsed" desc="main">
-    ///*
-    public static void main(String[] args) {
-        Arbol a = new Arbol(10,10);
-        out.println(a.toString());
-    }
-    //*/
-//</editor-fold>
-
     //<editor-fold defaultstate="collapsed" desc="tostring">
     @Override
     public String toString() {

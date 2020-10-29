@@ -21,25 +21,18 @@ import modelo.Arbol;
  */
 public class PPN extends JPanel {
     
+    //<editor-fold defaultstate="collapsed" desc="vars">
+    Arbol[] arboles = new Arbol[10];
+    boolean arbolesPintados = false;
+//</editor-fold>
+    
+    //<editor-fold defaultstate="collapsed" desc="pintaComponente">
     @Override
     protected void paintComponent(Graphics g) {
         super.paintComponent(g); 
         pintaComponente(g);
     }
-    
-    Arbol[] arboles = new Arbol[10];
-    void pintaArboles(int anchoP, int altoP) {
-        int nArboles = 10;
-        //se puede usar arrayList
-        
-        Random r = new Random();
-        for (int i=0; i<nArboles; i++) {
-            arboles[i]=new Arbol(r.nextInt(anchoP), r.nextInt(altoP));
-        }
-        //out.println(Arrays.toString(arboles));
-    }
-    
-    boolean arbolesPintados = false;
+
     //por cada repaint
     void pintaComponente(Graphics g) {
         
@@ -59,4 +52,18 @@ public class PPN extends JPanel {
             g.drawPolygon(x, a.getsY(), x.length);
         }
     }
+//</editor-fold>
+    
+    //<editor-fold defaultstate="collapsed" desc="pintaArboles">
+    void pintaArboles(int anchoP, int altoP) {
+        int nArboles = 10;
+        //se puede usar arrayList
+        
+        Random r = new Random();
+        for (int arbol = 0; arbol < nArboles; arbol++) {
+            arboles[arbol]=new Arbol(r.nextInt(anchoP), r.nextInt(altoP));
+        }
+        //out.println(Arrays.toString(arboles));
+    }
+//</editor-fold>
 }

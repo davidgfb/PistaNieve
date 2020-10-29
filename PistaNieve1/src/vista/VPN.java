@@ -5,8 +5,10 @@
  */
 package vista;
 
+//<editor-fold defaultstate="collapsed" desc="imports">
 import javax.swing.JFrame;
 import javax.swing.JScrollPane;
+//</editor-fold>
 
 /**
  *
@@ -16,22 +18,6 @@ import javax.swing.JScrollPane;
  * arrastra con el raton sin sliders
  */
 public class VPN extends JFrame {
-
-    /**
-     * Creates new form VPN
-     */
-    public VPN() {
-        initComponents();
-    }
-
-    //<editor-fold defaultstate="collapsed" desc="getters">
-    public JScrollPane getjScrollPane() {
-        return jScrollPane;
-    }
-//</editor-fold>
-    
-    
-    
 
     /**
      * This method is called from within the constructor to initialize the form.
@@ -54,4 +40,26 @@ public class VPN extends JFrame {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JScrollPane jScrollPane;
     // End of variables declaration//GEN-END:variables
+
+    //<editor-fold defaultstate="collapsed" desc="constructor">
+    /**
+     * Creates new form VPN
+     */
+    public VPN() {
+        initComponents();
+    }
+//</editor-fold>
+    
+    //<editor-fold defaultstate="collapsed" desc="getters">
+    public JScrollPane getjScrollPane() {
+        return jScrollPane;
+    }
+//</editor-fold>
+
+    //<editor-fold defaultstate="collapsed" desc="toString">
+    @Override
+    public String toString() {
+        return "VPN{" + "jScrollPane=" + jScrollPane + '}';
+    }
+//</editor-fold>
 }

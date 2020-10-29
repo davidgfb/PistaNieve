@@ -27,6 +27,7 @@ public class Main {
         PPN pPN = new PPN();
         pPN.setPreferredSize(new Dimension(1600,1200));
         vPN.getjScrollPane().setViewportView(pPN);
+        vPN.setResizable(false);
         vPN.setVisible(true);
     }
 //</editor-fold>

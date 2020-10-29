@@ -87,11 +87,11 @@ public class PMenu extends JPanel implements ActionListener {
         
         eNVisitantes.setText(Integer.toString(h));
         
+        String men="cerrado noche";
         if (h>5) {
-            out.println("abierto dia");
-        } else {
-            out.println("cerrado noche");
-        }
+            men="abierto dia";
+        } 
+        out.println(men);
     }
     
     int t = 0;

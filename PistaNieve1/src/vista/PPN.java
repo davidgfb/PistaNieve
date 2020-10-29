@@ -6,6 +6,7 @@
 package vista;
 
 //<editor-fold defaultstate="collapsed" desc="imports">
+import java.awt.Color;
 import java.awt.Graphics;
 import java.awt.Graphics2D;
 import static java.awt.RenderingHints.KEY_ANTIALIASING;
@@ -49,7 +50,11 @@ public class PPN extends JPanel {
         
         for (Arbol a : arboles) {
             int[] x = a.getsX();
-            g.drawPolygon(x, a.getsY(), x.length);
+            //g.drawPolygon(x, a.getsY(), x.length);
+            //Color verdeOscuro = new Color(0, 153, 0),
+            //verdeMuyOscuro
+            g.setColor(new Color(0, 102, 0));
+            g.fillPolygon(x, a.getsY(), x.length);
         }
     }
 //</editor-fold>

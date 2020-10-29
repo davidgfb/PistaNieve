@@ -6,6 +6,7 @@
 package modelo;
 
 //<editor-fold defaultstate="collapsed" desc="imports">
+import static java.awt.Color.white;
 import java.awt.Dimension;
 import vista.PPN;
 import vista.VPN;
@@ -28,6 +29,7 @@ public class Main {
         pPN.setPreferredSize(new Dimension(1600,1200));
         vPN.getjScrollPane().setViewportView(pPN);
         vPN.setResizable(false);
+        pPN.setBackground(white);
         vPN.setVisible(true);
     }
 //</editor-fold>

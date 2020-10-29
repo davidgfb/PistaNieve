@@ -5,9 +5,12 @@
  */
 package modelo;
 
-import javax.swing.JFrame;
+//<editor-fold defaultstate="collapsed" desc="imports">
+import java.awt.Dimension;
 import vista.PPN;
 import vista.VPN;
+//</editor-fold>
+
 
 /**
  *
@@ -19,24 +22,11 @@ public class Main {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
-        //no necesito setDCO(3)
-        /*
-        VPN vPN = new VPN();
-        vPN.setVisible(true);
-        */
-        
-        ///*
-    
+        //no necesito setDCO(3)        
         VPN vPN = new VPN();
         PPN pPN = new PPN();
-        //vPN.setSize(800, 600);
-        //vPN.add(pPN);
-        //f.setDefaultCloseOperation(3);
-        //vPN.getContentPane().setP
-        //jScrollPane
+        pPN.setPreferredSize(new Dimension(1600,1200));
         vPN.getjScrollPane().setViewportView(pPN);
         vPN.setVisible(true);
-    
-        //*/
     }
 }

@@ -6,6 +6,7 @@
 package vista;
 
 //<editor-fold defaultstate="collapsed" desc="imports">
+import java.awt.Dimension;
 import java.awt.Graphics;
 import java.awt.Graphics2D;
 import static java.awt.RenderingHints.KEY_ANTIALIASING;

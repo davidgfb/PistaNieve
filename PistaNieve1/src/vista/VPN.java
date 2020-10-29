@@ -6,6 +6,7 @@
 package vista;
 
 import javax.swing.JFrame;
+import javax.swing.JScrollPane;
 
 /**
  *
@@ -22,6 +23,15 @@ public class VPN extends JFrame {
     public VPN() {
         initComponents();
     }
+
+    //<editor-fold defaultstate="collapsed" desc="getters">
+    public JScrollPane getjScrollPane() {
+        return jScrollPane;
+    }
+//</editor-fold>
+    
+    
+    
 
     /**
      * This method is called from within the constructor to initialize the form.

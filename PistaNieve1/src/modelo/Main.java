@@ -27,12 +27,15 @@ public class Main {
         
         ///*
     
-        JFrame f = new JFrame();
+        VPN vPN = new VPN();
         PPN pPN = new PPN();
-        f.setSize(800, 600);
-        f.add(pPN);
-        f.setDefaultCloseOperation(3);
-        f.setVisible(true);
+        //vPN.setSize(800, 600);
+        //vPN.add(pPN);
+        //f.setDefaultCloseOperation(3);
+        //vPN.getContentPane().setP
+        //jScrollPane
+        vPN.getjScrollPane().setViewportView(pPN);
+        vPN.setVisible(true);
     
         //*/
     }

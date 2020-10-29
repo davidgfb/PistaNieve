@@ -27,7 +27,8 @@ import modelo.Arbol;
 public class PPN extends JPanel {
 
     public PPN() {
-        setSize(1600,1200);
+        //setSize(1600,1200);
+        
     }
     
     @Override
@@ -36,6 +37,20 @@ public class PPN extends JPanel {
         pintaComponente(g);
     }
     
+    Arbol[] arboles = new Arbol[10];
+    void pintaArboles(int anchoP, int altoP) {
+        int nArboles = 10;
+        //se puede usar arrayList
+        
+        Random r = new Random();
+        for (int i=0; i<nArboles; i++) {
+            arboles[i]=new Arbol(r.nextInt(anchoP), r.nextInt(altoP));
+        }
+        //out.println(Arrays.toString(arboles));
+    }
+    
+    boolean arbolesPintados = false;
+    //por cada repaint
     void pintaComponente(Graphics g) {
         
         Graphics2D g2d = (Graphics2D) g;
@@ -44,14 +59,10 @@ public class PPN extends JPanel {
         int anchoP = getWidth(), 
             altoP = getHeight();
         
-        int nArboles = 10;
-        //se puede usar arrayList
-        Arbol[] arboles = new Arbol[10];
-        Random r = new Random();
-        for (int i=0; i<nArboles; i++) {
-            arboles[i]=new Arbol(r.nextInt(anchoP), r.nextInt(altoP));
+        if (arbolesPintados==false) {
+            pintaArboles(anchoP, altoP);
+            arbolesPintados=true;
         }
-        //out.println(Arrays.toString(arboles));
         
         for (Arbol a : arboles) {
             int[] x = a.getsX();

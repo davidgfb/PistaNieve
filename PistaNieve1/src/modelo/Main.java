@@ -11,13 +11,13 @@ import vista.PPN;
 import vista.VPN;
 //</editor-fold>
 
-
 /**
  *
  * @author David
  */
 public class Main {
 
+    //<editor-fold defaultstate="collapsed" desc="main">
     /**
      * @param args the command line arguments
      */
@@ -29,4 +29,5 @@ public class Main {
         vPN.getjScrollPane().setViewportView(pPN);
         vPN.setVisible(true);
     }
+//</editor-fold>
 }

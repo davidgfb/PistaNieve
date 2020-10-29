@@ -5,12 +5,15 @@
  */
 package vista;
 
+//<editor-fold defaultstate="collapsed" desc="imports">
 import java.awt.Graphics;
 import java.awt.Graphics2D;
 import static java.awt.RenderingHints.KEY_ANTIALIASING;
 import static java.awt.RenderingHints.VALUE_ANTIALIAS_ON;
 import javax.swing.JFrame;
 import javax.swing.JPanel;
+//</editor-fold>
+
 
 /**
  *

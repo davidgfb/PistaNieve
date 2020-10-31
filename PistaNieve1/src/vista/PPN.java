@@ -11,6 +11,8 @@ import java.awt.Graphics;
 import java.awt.Graphics2D;
 import static java.awt.RenderingHints.KEY_ANTIALIASING;
 import static java.awt.RenderingHints.VALUE_ANTIALIAS_ON;
+import static java.lang.System.out;
+import java.util.Arrays;
 import java.util.Random;
 import javax.swing.JPanel;
 import modelo.Arbol;
@@ -25,6 +27,7 @@ public class PPN extends JPanel {
     //<editor-fold defaultstate="collapsed" desc="vars">
     Arbol[] arboles = new Arbol[10];
     boolean arbolesPintados = false;
+    long semilla = new Random().nextLong();
 //</editor-fold>
     
     //<editor-fold defaultstate="collapsed" desc="pintaComponente">
@@ -59,16 +62,32 @@ public class PPN extends JPanel {
     }
 //</editor-fold>
     
+    //<editor-fold defaultstate="collapsed" desc="setters">
+    public void setSemilla(long semilla) {
+        this.semilla = semilla;
+    }
+//</editor-fold>
+    
     //<editor-fold defaultstate="collapsed" desc="pintaArboles">
     void pintaArboles(int anchoP, int altoP) {
         int nArboles = 10;
         //se puede usar arrayList
         
-        Random r = new Random();
+        Random r = new Random(semilla);
+        
         for (int arbol = 0; arbol < nArboles; arbol++) {
             arboles[arbol]=new Arbol(r.nextInt(anchoP), r.nextInt(altoP));
         }
+        
+        //out.println("semilla: "+semilla+"L");
         //out.println(Arrays.toString(arboles));
+    }
+//</editor-fold>
+
+    //<editor-fold defaultstate="collapsed" desc="tostring">
+    @Override
+    public String toString() {
+        return "PPN{arbolesPintados=" + arbolesPintados + ", semilla=" + semilla + '}';
     }
 //</editor-fold>
 }

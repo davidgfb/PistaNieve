@@ -8,6 +8,7 @@ package Main;
 //<editor-fold defaultstate="collapsed" desc="imports">
 import static java.awt.Color.white;
 import java.awt.Dimension;
+import static java.lang.System.out;
 import vista.PPN;
 import vista.VPN;
 //</editor-fold>
@@ -31,6 +32,8 @@ public class Main {
         vPN.setResizable(false);
         pPN.setBackground(white);
         vPN.setVisible(true);
+        
+        out.println(pPN.toString());
     }
 //</editor-fold>
 }

@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package panelesMenus;
+package Menu.panel;
 
 //<editor-fold defaultstate="collapsed" desc="imports">
 import static java.awt.Color.white;
@@ -15,7 +15,7 @@ import javax.swing.Timer;
  *
  * @author David
  */
-public class Main {
+public class MainPanel {
     
     //<editor-fold defaultstate="collapsed" desc="main">
     public static void main(String[] args) {

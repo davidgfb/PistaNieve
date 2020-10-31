@@ -5,6 +5,11 @@
  */
 package Menu;
 
+import Menu.salida.PSalida;
+import java.awt.BorderLayout;
+import static java.lang.System.out;
+import javax.swing.JPanel;
+
 /**
  *
  * @author David
@@ -27,22 +32,54 @@ public class VMenu extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        bInicio = new javax.swing.JButton();
+        bSalida = new javax.swing.JButton();
+        eFoto = new javax.swing.JLabel();
 
-        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
-        getContentPane().setLayout(layout);
-        layout.setHorizontalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 800, Short.MAX_VALUE)
-        );
-        layout.setVerticalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 600, Short.MAX_VALUE)
-        );
+        setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        bInicio.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
+        bInicio.setText("Inicio");
+        bInicio.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                bInicioActionPerformed(evt);
+            }
+        });
+        getContentPane().add(bInicio, new org.netbeans.lib.awtextra.AbsoluteConstraints(1700, 810, -1, -1));
+
+        bSalida.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
+        bSalida.setText("Salida");
+        bSalida.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                bSalidaActionPerformed(evt);
+            }
+        });
+        getContentPane().add(bSalida, new org.netbeans.lib.awtextra.AbsoluteConstraints(1700, 860, -1, -1));
+
+        eFoto.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/menu.jpg"))); // NOI18N
+        getContentPane().add(eFoto, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, -1));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
+    private void bSalidaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bSalidaActionPerformed
+        //dispose();
+        //panel confirmacion
+        
+        //TODO como funciona absoluteconstraints?
+        PSalida pS = new PSalida();
+        getContentPane().add(pS, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 810, 200, 200));
+        pack();
+    }//GEN-LAST:event_bSalidaActionPerformed
+
+    private void bInicioActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bInicioActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_bInicioActionPerformed
+
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton bInicio;
+    private javax.swing.JButton bSalida;
+    private javax.swing.JLabel eFoto;
     // End of variables declaration//GEN-END:variables
 }
